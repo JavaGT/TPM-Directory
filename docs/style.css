@@ -29,9 +29,9 @@ a {
   text-decoration-color: rgba(0, 0, 0, 0.3);
   color: inherit;
 }
-nav * {
+nav > * {
   flex-grow: 0;
-  width: 10rem;
+  width: 12rem;
 }
 nav h3 {
   flex-grow: 1;
@@ -92,7 +92,6 @@ nav a {
   background-color: var(--light-text);
   color: var(--light-bg-1);
 }
-
 input#search {
   border: none;
   outline: none;
