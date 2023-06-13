@@ -1,0 +1,163 @@
+:root {
+  --light-bg-1: #eee;
+  --light-bg-2: #d4d4d4;
+  --light-text: #555;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: var(--light-bg-1);
+}
+body {
+  margin: 0;
+}
+.icon {
+  height: 2rem;
+}
+.external .icon {
+  opacity: 0.5;
+}
+.external .icon:hover {
+  opacity: 1;
+}
+nav {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  background-color: var(--light-bg-2);
+  color: var(--light-text);
+}
+a {
+  text-decoration-color: rgba(0, 0, 0, 0.3);
+  color: inherit;
+}
+nav * {
+  flex-grow: 0;
+  width: 10rem;
+}
+nav h3 {
+  flex-grow: 1;
+  text-align: center;
+}
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+.content {
+  max-width: 100%;
+  flex-direction: row;
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+.block {
+  width: 100%;
+  display: flex;
+  align: center;
+}
+.hero > * {
+  padding: min(5em, 5vw);
+  flex-shrink: 1;
+}
+.block > img {
+  align-self: center;
+  border-radius: 50%;
+  max-width: min(18rem, 25vw);
+  max-height: min(18rem, 25vw);
+}
+.titles,
+.description,
+.external,
+.authors,
+.tag {
+  margin-bottom: 0.5rem;
+}
+.title {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tag {
+  background-color: var(--light-bg-2);
+  color: var(--light-text);
+  text-decoration: none;
+  font-size: 0.7em;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  margin-right: 0.5em;
+}
+.tag:hover {
+  background-color: var(--light-text);
+  color: var(--light-bg-1);
+}
+
+input#search {
+  border: none;
+  outline: none;
+  background: none;
+}
+button.search {
+  width: 2em;
+  /* background: var(--light-bg); */
+  outline: none;
+  border: none;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+button.search:hover {
+  background: var(--light-text);
+  color: var(--light-bg);
+}
+.publications {
+  padding: 5rem;
+  padding-top: 2rem;
+}
+
+.authors {
+  font-size: 0.8em;
+}
+.publication {
+  border-bottom: 0.1rem solid var(--light-bg-2);
+  padding: 1rem;
+  & .icon {
+    height: 5rem;
+  }
+  & h1 {
+    font-size: 1.2rem;
+  }
+  & .author {
+    display: inline-block;
+    /* padding: 0.1em 0.5em; */
+    margin: 0.1rem;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    font-size: 0.9em;
+  }
+  nav {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 480px) {
+  :root {
+    font-size: 0.8em;
+  }
+  nav {
+    flex-wrap: wrap;
+  }
+  nav > * {
+    width: 100%;
+  }
+  .hero {
+    flex-wrap: wrap;
+    & img {
+      margin: 0 auto;
+    }
+  }
+  .hero > * {
+    width: 100%;
+  }
+}
